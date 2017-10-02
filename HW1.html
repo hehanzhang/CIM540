@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Miles to km calculator </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script type="text/javascript">
+function alertMsg(){
+    var mi = document.getElementById("mi").value;
+        if(isNaN(mi) || mi == ''){
+            alert('please enter a number');
+            document.getElementById("kilometre").innerHTML = '';
+            return false;
+        }
+
+        if(mi <= 0){
+            alert('Please enter a number greater than 0');
+            document.getElementById("kilometre").innerHTML = '';
+            return false;
+        }
+    var kilometre =  parseFloat(mi) *  1.609344;
+    document.getElementById("kilometre").innerHTML = 'kilometre : ' + kilometre + ' km';
+}
+
+</script>
+</head>
+<body>
+    <h1>Miles to km calculator</h1>
+    <form action="" method="post" >
+
+    <label for="mi">Mile:</label>
+    <input type="text" name="mi" id="mi">
+
+    <br>
+    <br>
+    <input type="button" onclick="alertMsg()" value="Submit">
+    <div id="kilometre"></div>
+    </form>  
+    
+        </div>
+    </div>
+</body>
+
+<html>
+    
